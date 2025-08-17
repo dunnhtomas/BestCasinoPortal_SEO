@@ -1,0 +1,80 @@
+name: 'Setup Claude Code Ultra Environment'
+description: 'Sets up multi-language development environment for Claude Code Ultra agents'
+inputs:
+  php-version:
+    description: 'PHP version to use'
+    required: false
+    default: '8.1'
+  node-version:
+    description: 'Node.js version to use'
+    required: false
+    default: '18'
+  python-version:
+    description: 'Python version to use'
+    required: false
+    default: '3.11'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Setup PHP'
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ inputs.php-version }}
+        extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_mysql, pdo_pgsql, dom, filter, gd, hash, json, libxml, openssl, pcre, pdo, pdo_sqlite, readline, regex, session, simplexml, spl, tokenizer, curl, fileinfo, ftp, exif, sodium
+        ini-values: post_max_size=256M, upload_max_filesize=256M, memory_limit=512M
+        coverage: none
+        tools: composer, phpunit
+
+    - name: 'Setup Node.js'
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+
+    - name: 'Setup Python'
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ inputs.python-version }}
+        cache: 'pip'
+
+    - name: 'Install PHP Dependencies'
+      shell: bash
+      run: |
+        if [ -f composer.json ]; then
+          composer install --no-progress --no-suggest --no-interaction --prefer-dist --optimize-autoloader
+        fi
+
+    - name: 'Install Node.js Dependencies'
+      shell: bash
+      run: |
+        if [ -f package.json ]; then
+          npm ci
+        fi
+
+    - name: 'Install Python Dependencies'
+      shell: bash
+      run: |
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
+        pip install playwright pytest requests
+
+    - name: 'Setup Agent Environment'
+      shell: bash
+      run: |
+        echo "🤖 Setting up Claude Code Ultra agent environment..."
+        mkdir -p agents/logs
+        mkdir -p agents/reports
+        mkdir -p test-results
+        chmod +x agents/*.py
+        echo "✅ Agent environment ready"
+
+    - name: 'Verify Environment'
+      shell: bash
+      run: |
+        echo "🔍 Verifying environment setup..."
+        php --version
+        node --version
+        python --version
+        echo "✅ All environments ready for Claude Code Ultra"

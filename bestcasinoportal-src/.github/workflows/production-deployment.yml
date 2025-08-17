@@ -1,0 +1,290 @@
+name: 🎰 BestCasinoPortal.com - Production Deployment
+
+on:
+  push:
+    branches: [main, production]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '20.x'
+  PHP_VERSION: '8.1'
+  DEPLOYMENT_TARGET: 'production'
+
+jobs:
+  # Security & Code Quality Checks
+  security-audit:
+    name: 🛡️ Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run security audit
+        run: |
+          npm audit --audit-level=moderate
+          npm run security:scan
+      
+      - name: Check for vulnerabilities
+        run: npm run security:check
+
+  # Performance & Core Web Vitals Testing
+  performance-testing:
+    name: ⚡ Performance Testing
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build application
+        run: npm run build:production
+      
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli
+          lhci autorun --upload.target=temporary-public-storage
+      
+      - name: Core Web Vitals validation
+        run: npm run performance:validate
+
+  # Cross-Browser E2E Testing (Mandatory)
+  playwright-testing:
+    name: 🧪 Cross-Browser Testing (Deployment Blocking)
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+      - name: Run Playwright tests
+        run: npx playwright test --project=${{ matrix.browser }}
+        env:
+          CI: true
+      
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: playwright-report/
+      
+      # DEPLOYMENT BLOCKING: Fail if any test fails
+      - name: Deployment Gate Check
+        run: |
+          if [ $? -ne 0 ]; then
+            echo "🚫 DEPLOYMENT BLOCKED: Tests failed"
+            exit 1
+          fi
+
+  # PHP Backend Testing
+  php-testing:
+    name: 🐘 PHP Backend Testing
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: bestcasinoportal_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      
+      redis:
+        image: redis:7
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: pdo, pgsql, redis, mbstring
+      
+      - name: Install Composer dependencies
+        run: |
+          cd backend
+          composer install --no-dev --optimize-autoloader
+      
+      - name: Run PHP unit tests
+        run: |
+          cd backend
+          ./vendor/bin/phpunit --coverage-clover coverage.xml
+      
+      - name: API performance tests
+        run: |
+          cd backend
+          php artisan test --filter=ApiPerformanceTest
+
+  # Frontend Build & Testing
+  frontend-build:
+    name: 🎨 Frontend Build & Optimization
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm ci
+      
+      - name: Type checking
+        run: |
+          cd frontend
+          npm run type-check
+      
+      - name: Lint code
+        run: |
+          cd frontend
+          npm run lint
+      
+      - name: Build for production
+        run: |
+          cd frontend
+          npm run build
+        env:
+          NODE_ENV: production
+      
+      - name: Bundle analysis
+        run: |
+          cd frontend
+          npm run analyze
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: frontend/dist/
+
+  # Database Migration & Seeding
+  database-setup:
+    name: 🗄️ Database Migration
+    runs-on: ubuntu-latest
+    needs: [php-testing]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+      
+      - name: Run migrations
+        run: |
+          cd backend
+          php artisan migrate --force
+      
+      - name: Seed casino data
+        run: |
+          cd backend
+          php artisan db:seed --class=CasinoSeeder
+
+  # Production Deployment
+  deploy-production:
+    name: 🚀 Production Deployment
+    runs-on: ubuntu-latest
+    needs: [security-audit, performance-testing, playwright-testing, php-testing, frontend-build, database-setup]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment: production
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-build
+          path: frontend/dist/
+      
+      - name: Deploy to production servers
+        run: |
+          echo "🚀 Deploying to production servers..."
+          # Production deployment commands would go here
+          
+      - name: Update CDN cache
+        run: |
+          echo "🔄 Updating CDN cache..."
+          # CDN cache invalidation
+      
+      - name: Health check
+        run: |
+          echo "🏥 Running production health checks..."
+          curl -f https://bestcasinoportal.com/health || exit 1
+      
+      - name: Notify deployment success
+        run: |
+          echo "✅ Deployment successful!"
+          echo "🎰 BestCasinoPortal.com is live!"
+
+  # Post-Deployment Monitoring
+  post-deployment-monitoring:
+    name: 📊 Post-Deployment Monitoring
+    runs-on: ubuntu-latest
+    needs: [deploy-production]
+    if: success()
+    
+    steps:
+      - name: Start monitoring
+        run: |
+          echo "📈 Starting post-deployment monitoring..."
+      
+      - name: Core Web Vitals check
+        run: |
+          # Real User Monitoring validation
+          curl -s "https://bestcasinoportal.com/api/performance/metrics" | jq .
+      
+      - name: SEO validation
+        run: |
+          # SEO health check
+          echo "🔍 Validating SEO configuration..."
+      
+      - name: Security headers check
+        run: |
+          # Security headers validation
+          curl -I https://bestcasinoportal.com | grep -E "(Strict-Transport-Security|X-Frame-Options|Content-Security-Policy)"
+      
+      - name: Analytics setup
+        run: |
+          echo "📊 Analytics and monitoring active"

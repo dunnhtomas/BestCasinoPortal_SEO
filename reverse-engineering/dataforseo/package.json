@@ -1,0 +1,27 @@
+{
+  "name": "casino-ca-seo-analyzer",
+  "version": "1.0.0",
+  "description": "DataForSEO analysis engine for casino.ca reverse engineering",
+  "type": "module",
+  "main": "casino-ca-seo-analyzer.js",
+  "scripts": {
+    "analyze": "node --loader ts-node/esm casino-ca-seo-analyzer.ts",
+    "build": "tsc",
+    "dev": "node --loader ts-node/esm casino-ca-seo-analyzer.ts",
+    "test": "npm run analyze"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "fs-extra": "^11.2.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

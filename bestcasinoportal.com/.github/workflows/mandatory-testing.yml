@@ -1,0 +1,191 @@
+name: 🧪 Mandatory Playwright Testing (Deployment Blocking)
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  deployment_status:
+
+jobs:
+  # Pre-deployment validation
+  pre-deployment-check:
+    name: 🔍 Pre-Deployment Validation
+    runs-on: ubuntu-latest
+    if: github.event.deployment_status.state == 'success' || github.event_name != 'deployment_status'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build project
+      run: npm run build
+    
+    - name: Validate build artifacts
+      run: |
+        if [ ! -d "dist" ]; then
+          echo "❌ DEPLOYMENT BLOCKED: Build artifacts not found"
+          exit 1
+        fi
+        echo "✅ Build artifacts validated"
+
+  # Mandatory testing across all browsers
+  mandatory-testing:
+    name: 🎯 Mandatory Cross-Browser Testing
+    runs-on: ubuntu-latest
+    needs: pre-deployment-check
+    strategy:
+      fail-fast: true # Fail immediately if any browser fails
+      matrix:
+        project: 
+          - chromium
+          - firefox
+          - webkit
+          - edge
+          - Mobile Chrome
+          - Mobile Safari
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    
+    - name: Run Mandatory Tests - ${{ matrix.project }}
+      run: npx playwright test --project="${{ matrix.project }}" --reporter=json
+      env:
+        PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url || 'https://bestcasinoportal.com' }}
+    
+    - name: Upload Test Results - ${{ matrix.project }}
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results-${{ matrix.project }}
+        path: test-results/
+        retention-days: 30
+
+  # Performance validation (deployment blocking)
+  performance-validation:
+    name: ⚡ Performance Validation (Deployment Blocking)
+    runs-on: ubuntu-latest
+    needs: pre-deployment-check
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Playwright Browsers
+      run: npx playwright install chromium --with-deps
+    
+    - name: Run Performance Tests (Mandatory)
+      run: npx playwright test --project=performance --reporter=json
+      env:
+        PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url || 'https://bestcasinoportal.com' }}
+    
+    - name: Validate Core Web Vitals
+      run: |
+        # Parse test results and validate Core Web Vitals
+        if grep -q "Performance.*FAILED" test-results/test-results.json; then
+          echo "❌ DEPLOYMENT BLOCKED: Core Web Vitals requirements not met"
+          exit 1
+        fi
+        echo "✅ Core Web Vitals validation passed"
+
+  # Security validation (deployment blocking)  
+  security-validation:
+    name: 🛡️ Security Validation (Deployment Blocking)
+    runs-on: ubuntu-latest
+    needs: pre-deployment-check
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Playwright Browsers
+      run: npx playwright install chromium --with-deps
+    
+    - name: Run Security Tests (Mandatory)
+      run: npx playwright test --project=security --reporter=json
+      env:
+        PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url || 'https://bestcasinoportal.com' }}
+    
+    - name: Validate Security Compliance
+      run: |
+        if grep -q "Security.*FAILED" test-results/test-results.json; then
+          echo "❌ DEPLOYMENT BLOCKED: Security compliance requirements not met"
+          exit 1
+        fi
+        echo "✅ Security compliance validation passed"
+
+  # Final deployment authorization
+  deployment-authorization:
+    name: 🚀 Deployment Authorization
+    runs-on: ubuntu-latest
+    needs: [mandatory-testing, performance-validation, security-validation]
+    if: success()
+    
+    steps:
+    - name: ✅ All Mandatory Tests Passed
+      run: |
+        echo "🎉 ALL MANDATORY TESTS PASSED"
+        echo "✅ Cross-browser compatibility: PASSED"
+        echo "✅ Performance requirements: PASSED" 
+        echo "✅ Security compliance: PASSED"
+        echo "🚀 DEPLOYMENT AUTHORIZED"
+    
+    - name: Generate Test Report
+      run: |
+        echo "# 📊 Mandatory Testing Report" >> $GITHUB_STEP_SUMMARY
+        echo "## ✅ Test Results" >> $GITHUB_STEP_SUMMARY
+        echo "- **Cross-browser Testing**: PASSED (All browsers)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Performance Validation**: PASSED (Core Web Vitals)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Security Compliance**: PASSED (Enterprise standards)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Deployment Status**: 🚀 AUTHORIZED" >> $GITHUB_STEP_SUMMARY
+
+  # Block deployment on failure
+  deployment-blocked:
+    name: ❌ Deployment Blocked
+    runs-on: ubuntu-latest
+    needs: [mandatory-testing, performance-validation, security-validation]
+    if: failure()
+    
+    steps:
+    - name: ❌ Deployment Blocked
+      run: |
+        echo "❌ DEPLOYMENT BLOCKED: Mandatory tests failed"
+        echo "🔒 Production deployment has been blocked due to test failures"
+        echo "📋 Please review test results and fix issues before deployment"
+        exit 1

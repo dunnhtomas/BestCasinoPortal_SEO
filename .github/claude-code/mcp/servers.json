@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "casino-portal-tools": {
+      "command": "npx",
+      "args": ["-y", "@casino-portal/mcp-tools"],
+      "env": {
+        "CASINO_API_KEY": "${CASINO_API_KEY}",
+        "SERVER_IP": "193.233.161.161"
+      }
+    },
+    "playwright-testing": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp-server"],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "./node_modules/playwright"
+      }
+    },
+    "security-scanner": {
+      "command": "npx", 
+      "args": ["-y", "@security/mcp-scanner"],
+      "env": {
+        "SECURITY_LEVEL": "enterprise",
+        "COMPLIANCE": "SOC2,GDPR"
+      }
+    },
+    "performance-monitor": {
+      "command": "npx",
+      "args": ["-y", "@performance/mcp-monitor"],
+      "env": {
+        "PERFORMANCE_TARGET": "casino-ca",
+        "CORE_WEB_VITALS": "true"
+      }
+    },
+    "database-tools": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "DB_CONNECTION_STRING": "${DATABASE_URL}",
+        "DB_SCHEMA": "casino_portal"
+      }
+    },
+    "github-integration": {
+      "command": "npx",
+      "args": ["-y", "@github/mcp-server"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "REPO": "casino-portal"
+      }
+    }
+  }
+}

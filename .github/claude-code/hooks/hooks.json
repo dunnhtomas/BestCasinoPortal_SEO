@@ -1,0 +1,67 @@
+{
+  "hooks": {
+    "ToolExecutePlaywright": [
+      {
+        "matcher": "Playwright*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Running Playwright test validation' && npx playwright test --reporter=json"
+          }
+        ]
+      }
+    ],
+    "ToolExecuteWrite": [
+      {
+        "matcher": "Write*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .github/claude-code/hooks/security-scan.js"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command", 
+            "command": "node .github/claude-code/hooks/validate-prompt.js"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Claude Code Ultra 2025 - Session Started' && node .github/claude-code/hooks/session-init.js"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .github/claude-code/hooks/session-cleanup.js"
+          }
+        ]
+      }
+    ],
+    "Deploy": [
+      {
+        "matcher": "*production*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx playwright test && node .github/claude-code/hooks/deployment-validation.js"
+          }
+        ]
+      }
+    ]
+  }
+}

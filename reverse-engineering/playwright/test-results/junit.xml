@@ -1,0 +1,362 @@
+<testsuites id="" name="" tests="84" failures="0" skipped="84" errors="0" time="9.302062">
+<testsuite name="casino-ca-reverse-engineering-fixed.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="chromium-desktop" tests="7" failures="0" skipped="7" time="5.436" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="5.436">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="chromium-desktop" tests="7" failures="0" skipped="7" time="5.427" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="5.427">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering-fixed.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="firefox-desktop" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="firefox-desktop" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering-fixed.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="webkit-desktop" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="webkit-desktop" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering-fixed.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="mobile-chrome" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="mobile-chrome" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering-fixed.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="mobile-safari" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="mobile-safari" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering-fixed.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="tablet" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering-fixed.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="casino-ca-reverse-engineering.spec.ts" timestamp="2025-08-17T21:00:24.680Z" hostname="tablet" tests="7" failures="0" skipped="7" time="0" errors="0">
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive Performance Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Security Headers and SSL Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Comprehensive SEO Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Technology Stack Detection" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Content Analysis and Keyword Density" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › User Experience and Mobile Responsiveness" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Casino.ca Comprehensive Reverse Engineering Suite › Page Speed and Resource Loading Analysis" classname="casino-ca-reverse-engineering.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
+    "content-security-policy": "upgrade-insecure-requests",
+    "x-frame-options": "DENY",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "permissions-policy": "Missing"
+  },
+  "httpsRedirect": false,
+  "mixedContent": false,
+  "cookieSecure": true
+}

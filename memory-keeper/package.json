@@ -1,0 +1,49 @@
+{
+  "name": "@bestcasinoportal/mcp-memory-keeper",
+  "version": "1.0.0",
+  "description": "Enterprise MCP Memory Keeper for BestCasinoPortal - Long project context management",
+  "main": "dist/index.js",
+  "bin": {
+    "casino-memory-keeper": "./bin/casino-memory-keeper.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "mcp",
+    "memory",
+    "context",
+    "claude",
+    "casino",
+    "enterprise"
+  ],
+  "author": "BestCasinoPortal",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "sqlite3": "^5.1.7",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4",
+    "glob": "^10.3.10",
+    "chokidar": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/uuid": "^9.0.7",
+    "@types/sqlite3": "^3.1.11",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11",
+    "rimraf": "^5.0.5"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "bestcasinoportal-deployment",
+  "version": "1.0.0",
+  "description": "Production deployment package for BestCasinoPortal.com",
+  "scripts": {
+    "setup:server": "bash deploy/server-setup.sh",
+    "setup:cloudflare": "node deploy/cloudflare-setup.js",
+    "deploy:production": "bash deploy/deploy.sh",
+    "monitor:production": "node deploy/production-monitor.js",
+    "health:check": "curl -f https://bestcasinoportal.com/health"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "production": {
+    "server": {
+      "hostname": "bestcasinoportal.com",
+      "ip": "193.233.161.161",
+      "username": "root",
+      "password": "6YTqBfsLRPAEYqy3ql",
+      "os": "Ubuntu 24.04"
+    },
+    "cloudflare": {
+      "token": "KhoBPsapJwVnmeg8iqoi0BGqOqgty3V9g4TocDXS",
+      "zone": "bestcasinoportal.com"
+    },
+    "deployment": {
+      "webRoot": "/var/www/bestcasinoportal.com",
+      "nginxConfig": "/etc/nginx/sites-available/bestcasinoportal.com",
+      "sslPath": "/etc/letsencrypt/live/bestcasinoportal.com",
+      "phpVersion": "8.1"
+    }
+  }
+}

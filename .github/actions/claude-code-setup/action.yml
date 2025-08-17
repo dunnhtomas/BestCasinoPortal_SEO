@@ -1,0 +1,176 @@
+name: '🤖 Claude Code Setup'
+description: 'Sets up Claude Code CLI and enterprise environment'
+author: 'BestCasinoPortal'
+
+inputs:
+  claude-version:
+    description: 'Claude Code CLI version'
+    required: false
+    default: '3.0.0'
+  install-playwright:
+    description: 'Install Playwright browsers'
+    required: false
+    default: 'true'
+  setup-mcp:
+    description: 'Setup MCP servers'
+    required: false
+    default: 'true'
+  enterprise-mode:
+    description: 'Enable enterprise features'
+    required: false
+    default: 'true'
+
+outputs:
+  claude-version:
+    description: 'Installed Claude Code version'
+    value: ${{ steps.install.outputs.version }}
+  mcp-servers:
+    description: 'Configured MCP servers'
+    value: ${{ steps.mcp.outputs.servers }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 🔍 Validate Environment
+      shell: bash
+      run: |
+        echo "🔍 Validating environment for Claude Code Ultra 2025..."
+        
+        # Check Node.js version
+        node_version=$(node --version | cut -d'v' -f2)
+        required_version="20.0.0"
+        
+        if ! printf '%s\n%s\n' "$required_version" "$node_version" | sort -V -C; then
+          echo "❌ Node.js $required_version+ required, found $node_version"
+          exit 1
+        fi
+        
+        echo "✅ Node.js $node_version is compatible"
+        
+    - name: 🤖 Install Claude Code CLI
+      id: install
+      shell: bash
+      run: |
+        echo "🤖 Installing Claude Code CLI v${{ inputs.claude-version }}..."
+        
+        # Install Claude Code CLI
+        npm install -g @anthropic-ai/claude-code@${{ inputs.claude-version }}
+        
+        # Verify installation
+        claude_version=$(claude --version)
+        echo "✅ Claude Code CLI installed: $claude_version"
+        echo "version=$claude_version" >> $GITHUB_OUTPUT
+        
+    - name: 🧪 Setup Playwright
+      if: inputs.install-playwright == 'true'
+      shell: bash
+      run: |
+        echo "🧪 Setting up Playwright browsers..."
+        
+        # Install Playwright
+        npm install -g playwright@latest
+        
+        # Install browsers
+        npx playwright install --with-deps chromium firefox webkit
+        
+        echo "✅ Playwright browsers installed"
+        
+    - name: 🔧 Configure MCP Servers
+      id: mcp
+      if: inputs.setup-mcp == 'true'
+      shell: bash
+      run: |
+        echo "🔧 Configuring MCP servers..."
+        
+        # Create .mcp.json if it doesn't exist
+        if [ ! -f .mcp.json ]; then
+          echo "Creating default .mcp.json configuration..."
+          cat > .mcp.json << 'EOF'
+        {
+          "mcpServers": {
+            "casino-portal-tools": {
+              "command": "npx",
+              "args": ["-y", "@casino-portal/mcp-tools"],
+              "env": {}
+            },
+            "playwright-testing": {
+              "command": "npx",
+              "args": ["-y", "@playwright/mcp-server"],
+              "env": {}
+            },
+            "security-scanner": {
+              "command": "npx",
+              "args": ["-y", "@security/mcp-scanner"],
+              "env": {
+                "SECURITY_LEVEL": "enterprise"
+              }
+            }
+          }
+        }
+        EOF
+        fi
+        
+        # Load MCP servers
+        claude mcp add-from-claude-desktop --scope project || true
+        
+        # List configured servers
+        mcp_servers=$(claude mcp list || echo "No MCP servers configured")
+        echo "servers=$mcp_servers" >> $GITHUB_OUTPUT
+        
+        echo "✅ MCP servers configured"
+        
+    - name: 🛡️ Enable Enterprise Features
+      if: inputs.enterprise-mode == 'true'
+      shell: bash
+      run: |
+        echo "🛡️ Enabling enterprise features..."
+        
+        # Create enterprise configuration directory
+        mkdir -p .github/claude-code/config
+        
+        # Create enterprise configuration
+        cat > .github/claude-code/config/enterprise.json << 'EOF'
+        {
+          "security": {
+            "level": "enterprise",
+            "auditLogging": true,
+            "permissionMode": "strict",
+            "compliance": ["SOC2", "GDPR"]
+          },
+          "performance": {
+            "monitoring": true,
+            "coreWebVitals": true,
+            "responseTimeTarget": 200
+          },
+          "architecture": {
+            "reference": "casino-ca",
+            "stack": ["PHP 8.1+", "Vue.js 3+", "Redis", "PostgreSQL"],
+            "testing": "playwright-mandatory"
+          },
+          "deployment": {
+            "environment": "production",
+            "server": "193.233.161.161",
+            "requiresValidation": true
+          }
+        }
+        EOF
+        
+        # Create hooks directory
+        mkdir -p .github/claude-code/hooks
+        
+        # Create sub-agents directory
+        mkdir -p .github/claude-code/sub-agents
+        
+        echo "✅ Enterprise features enabled"
+        
+    - name: 📋 Validation Summary
+      shell: bash
+      run: |
+        echo "📋 Claude Code Ultra 2025 Setup Complete"
+        echo "════════════════════════════════════════"
+        echo "🤖 Claude Code CLI: $(claude --version)"
+        echo "🧪 Playwright: $(npx playwright --version || echo 'Not installed')"
+        echo "🔧 MCP Servers: $(claude mcp list | wc -l || echo '0') configured"
+        echo "🛡️ Enterprise Mode: ${{ inputs.enterprise-mode }}"
+        echo "🎰 Architecture: Casino.ca reference"
+        echo "✅ Ready for enterprise development"

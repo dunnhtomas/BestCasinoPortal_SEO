@@ -1,0 +1,84 @@
+{
+  "name": "bestcasinoportal-development-suite",
+  "version": "2.0.0",
+  "description": "Casino portal development suite with MCP Memory Keeper and multi-agent orchestration",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/ --reporter=line",
+    "test:headed": "npx playwright test tests/ --headed",
+    "test:debug": "npx playwright test tests/ --debug",
+    
+    "cto:activate": "node scripts/cto-agent-activation.js",
+    "cto:status": "node scripts/cto-agent-status.js",
+    "agents:status": "node scripts/agent-status-monitor.js",
+    "agents:validate": "npm run test && echo 'All tests passed'",
+    "agents:deploy": "npm run agents:validate && echo 'Deploy when all tests pass'",
+    "cto:deploy": "node scripts/cto-agent-deploy.js",
+    
+    "agents:coordinate": "node scripts/multi-agent-coordinator.js",
+    "agents:health": "node scripts/agent-health-check.js",
+    "agents:generate": "node scripts/autonomous-code-generator.js",
+    "agents:seo": "node scripts/seo-content-generator.js",
+    "dashboard:start": "node scripts/dashboard-server.js",
+    "dashboard:dev": "npm run dashboard:start",
+    
+    "setup:env": "node scripts/setup-environment.js",
+    "setup:credentials": "node scripts/setup-credentials.js",
+    
+    "monitor:performance": "node scripts/performance-monitor.js",
+    "monitor:security": "node scripts/security-monitor.js",
+    
+    "deploy:preparation": "npm run test && npm run cto:activate",
+    "deploy:production": "npm run cto:deploy -- --environment production",
+    
+    "memory:init": "node scripts/memory-keeper-integration.js init",
+    "memory:save": "node scripts/memory-keeper-integration.js save",
+    "memory:checkpoint": "node scripts/memory-keeper-integration.js checkpoint",
+    "memory:summary": "node scripts/memory-keeper-integration.js summary",
+    "memory:test": "node scripts/memory-keeper-integration.js test",
+    
+    "help": "node scripts/help.js"
+  },
+  "keywords": [
+    "casino-portal",
+    "vue.js",
+    "php",
+    "playwright",
+    "mcp-memory-keeper",
+    "multi-agent",
+    "bestcasinoportal",
+    "performance-optimization",
+    "enterprise-development"
+  ],
+  "author": "BestCasinoPortal Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^11.0.0",
+    "chalk": "^5.3.0",
+    "ora": "^7.0.1",
+    "inquirer": "^9.2.0",
+    "fs-extra": "^11.1.0",
+    "dotenv": "^16.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bestcasinoportal/reverse-engineering-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bestcasinoportal/reverse-engineering-suite/issues"
+  },
+  "homepage": "https://bestcasinoportal.com"
+}

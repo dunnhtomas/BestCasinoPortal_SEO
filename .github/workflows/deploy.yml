@@ -1,0 +1,59 @@
+name: Casino Portal Deployment
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_mysql, dom, filter, gd, json
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.composer/cache/files
+        key: composer-${{ hashFiles('composer.lock') }}
+        
+    - name: Install PHP dependencies
+      run: composer install --prefer-dist --no-progress
+      
+    - name: Install Node dependencies
+      run: npm install
+      
+    - name: Build Vue.js assets
+      run: npm run build
+      
+    - name: Run PHP tests
+      run: vendor/bin/phpunit
+      
+    - name: Run Playwright tests
+      run: npm run test:playwright
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy to production
+      run: |
+        echo "Deploying to production server..."
+        # Add deployment commands here

@@ -1,0 +1,1192 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\playwright.config.ts",
+    "rootDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\global-setup.ts",
+    "globalTeardown": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "test-results/html-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/junit.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "firefox-desktop",
+        "name": "firefox-desktop",
+        "testDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "webkit-desktop",
+        "name": "webkit-desktop",
+        "testDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "mobile-chrome",
+        "name": "mobile-chrome",
+        "testDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "mobile-safari",
+        "name": "mobile-safari",
+        "testDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "C:/Users/tamir/Downloads/BestCasinoPortal_SEO/reverse-engineering/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.2",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "casino-ca-reverse-engineering-fixed.spec.ts",
+      "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Casino.ca Comprehensive Reverse Engineering Suite",
+          "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+          "line": 59,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Comprehensive Performance Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 5436,
+                      "error": {
+                        "message": "Error: page.evaluate: Target page, context or browser has been closed",
+                        "stack": "Error: page.evaluate: Target page, context or browser has been closed\n    at C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering-fixed.spec.ts:107:34",
+                        "location": {
+                          "file": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering-fixed.spec.ts",
+                          "column": 34,
+                          "line": 107
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 105 |\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[90m// Capture Core Web Vitals\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m webVitals \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m       \u001b[36mreturn\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m{\n \u001b[90m 109 |\u001b[39m         lcp\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\n \u001b[90m 110 |\u001b[39m         fid\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering-fixed.spec.ts",
+                            "column": 34,
+                            "line": 107
+                          },
+                          "message": "Error: page.evaluate: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 105 |\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[90m// Capture Core Web Vitals\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m webVitals \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m       \u001b[36mreturn\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m{\n \u001b[90m 109 |\u001b[39m         lcp\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\n \u001b[90m 110 |\u001b[39m         fid\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering-fixed.spec.ts:107:34\u001b[22m"
+                        },
+                        {
+                          "message": "Error: browserContext._wrapApiCall: Target page, context or browser has been closed"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🚀 Starting comprehensive performance analysis of casino.ca...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-17T21:00:25.524Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering-fixed.spec.ts",
+                        "column": 34,
+                        "line": 107
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e6d41449c024074cb149-5fc50e0bb099f9fbb80c",
+              "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "Security Headers and SSL Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e6d41449c024074cb149-fa4196f089690301f2c1",
+              "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+              "line": 172,
+              "column": 7
+            },
+            {
+              "title": "Comprehensive SEO Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e6d41449c024074cb149-a57f6a5c5796e154f2df",
+              "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "Technology Stack Detection",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e6d41449c024074cb149-35d7dfec66175b3c1400",
+              "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+              "line": 287,
+              "column": 7
+            },
+            {
+              "title": "Content Analysis and Keyword Density",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e6d41449c024074cb149-df4f2b63fdd5243966a2",
+              "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+              "line": 354,
+              "column": 7
+            },
+            {
+              "title": "User Experience and Mobile Responsiveness",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e6d41449c024074cb149-c0a3bdace0dd14369457",
+              "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+              "line": 432,
+              "column": 7
+            },
+            {
+              "title": "Page Speed and Resource Loading Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e6d41449c024074cb149-33bbdc43b8216edc601e",
+              "file": "casino-ca-reverse-engineering-fixed.spec.ts",
+              "line": 509,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "casino-ca-reverse-engineering.spec.ts",
+      "file": "casino-ca-reverse-engineering.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Casino.ca Comprehensive Reverse Engineering Suite",
+          "file": "casino-ca-reverse-engineering.spec.ts",
+          "line": 59,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Comprehensive Performance Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "interrupted",
+                      "duration": 5427,
+                      "error": {
+                        "message": "Error: page.evaluate: Target page, context or browser has been closed",
+                        "stack": "Error: page.evaluate: Target page, context or browser has been closed\n    at C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering.spec.ts:107:34",
+                        "location": {
+                          "file": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering.spec.ts",
+                          "column": 34,
+                          "line": 107
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 105 |\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[90m// Capture Core Web Vitals\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m webVitals \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m       \u001b[36mreturn\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m{\n \u001b[90m 109 |\u001b[39m         lcp\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\n \u001b[90m 110 |\u001b[39m         fid\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering.spec.ts",
+                            "column": 34,
+                            "line": 107
+                          },
+                          "message": "Error: page.evaluate: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 105 |\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[90m// Capture Core Web Vitals\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m webVitals \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m     |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m       \u001b[36mreturn\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m{\n \u001b[90m 109 |\u001b[39m         lcp\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\n \u001b[90m 110 |\u001b[39m         fid\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering.spec.ts:107:34\u001b[22m"
+                        },
+                        {
+                          "message": "Error: browserContext._wrapApiCall: Target page, context or browser has been closed"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🚀 Starting comprehensive performance analysis of casino.ca...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-17T21:00:25.521Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\tamir\\Downloads\\BestCasinoPortal_SEO\\reverse-engineering\\playwright\\casino-ca-reverse-engineering.spec.ts",
+                        "column": 34,
+                        "line": 107
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3265ca82c537d412bb43-c6eaa5d6b3e1f4960e73",
+              "file": "casino-ca-reverse-engineering.spec.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "Security Headers and SSL Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3265ca82c537d412bb43-356748dc112c4fb1f9ad",
+              "file": "casino-ca-reverse-engineering.spec.ts",
+              "line": 172,
+              "column": 7
+            },
+            {
+              "title": "Comprehensive SEO Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3265ca82c537d412bb43-c7d30ae500d8b3f692c0",
+              "file": "casino-ca-reverse-engineering.spec.ts",
+              "line": 216,
+              "column": 7
+            },
+            {
+              "title": "Technology Stack Detection",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3265ca82c537d412bb43-098c6fc47954d5830f65",
+              "file": "casino-ca-reverse-engineering.spec.ts",
+              "line": 287,
+              "column": 7
+            },
+            {
+              "title": "Content Analysis and Keyword Density",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3265ca82c537d412bb43-a395747a70590d3a7fe4",
+              "file": "casino-ca-reverse-engineering.spec.ts",
+              "line": 354,
+              "column": 7
+            },
+            {
+              "title": "User Experience and Mobile Responsiveness",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3265ca82c537d412bb43-6b4b137d7970652e3b86",
+              "file": "casino-ca-reverse-engineering.spec.ts",
+              "line": 432,
+              "column": 7
+            },
+            {
+              "title": "Page Speed and Resource Loading Analysis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-desktop",
+                  "projectName": "webkit-desktop",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [],
+                  "status": "skipped"
+                },
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3265ca82c537d412bb43-a90f584fc57b244a8ba8",
+              "file": "casino-ca-reverse-engineering.spec.ts",
+              "line": 509,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-17T21:00:22.420Z",
+    "duration": 9302.062,
+    "expected": 0,
+    "skipped": 84,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

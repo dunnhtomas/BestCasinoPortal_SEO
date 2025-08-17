@@ -1,0 +1,225 @@
+{
+  "version": "3.0.0",
+  "architectureType": "casino-ca-enterprise",
+  "security": {
+    "level": "enterprise",
+    "auditLogging": true,
+    "permissionMode": "strict",
+    "compliance": ["SOC2", "GDPR", "PCI-DSS"],
+    "features": {
+      "inputValidation": true,
+      "sqlInjectionPrevention": true,
+      "xssProtection": true,
+      "csrfValidation": true,
+      "sessionSecurity": true,
+      "apiSecurity": true,
+      "dataEncryption": true
+    }
+  },
+  "performance": {
+    "monitoring": true,
+    "coreWebVitals": {
+      "enabled": true,
+      "targets": {
+        "LCP": "2.5s",
+        "FID": "100ms", 
+        "CLS": "0.1"
+      }
+    },
+    "apiResponseTime": {
+      "target": "200ms",
+      "monitoring": true
+    },
+    "optimization": {
+      "images": ["AVIF", "WebP"],
+      "caching": "Redis",
+      "cdn": true,
+      "compression": true
+    }
+  },
+  "architecture": {
+    "reference": "casino-ca",
+    "backend": {
+      "language": "PHP",
+      "version": "8.1+",
+      "framework": "Custom",
+      "apiStructure": "/vue/api/",
+      "database": "PostgreSQL",
+      "cache": "Redis"
+    },
+    "frontend": {
+      "framework": "Vue.js",
+      "version": "3+",
+      "composition": "API",
+      "typescript": true,
+      "styling": "Tailwind CSS",
+      "responsive": "Mobile-first"
+    },
+    "infrastructure": {
+      "server": "193.233.161.161",
+      "webserver": "Nginx",
+      "ssl": "Required",
+      "deployment": "Blue-green"
+    }
+  },
+  "testing": {
+    "framework": "Playwright",
+    "mandatory": true,
+    "coverage": {
+      "minimum": "90%",
+      "enforcement": "pre-deployment"
+    },
+    "types": [
+      "unit",
+      "integration", 
+      "e2e",
+      "performance",
+      "security",
+      "accessibility"
+    ],
+    "browsers": ["chromium", "firefox", "webkit"],
+    "devices": ["desktop", "mobile", "tablet"]
+  },
+  "deployment": {
+    "strategy": "blue-green",
+    "environments": ["development", "staging", "production"],
+    "validation": {
+      "required": true,
+      "checks": [
+        "playwright-tests",
+        "security-scan",
+        "performance-validation",
+        "architecture-compliance"
+      ]
+    },
+    "approvals": {
+      "staging": "automated",
+      "production": "manual"
+    }
+  },
+  "mcp": {
+    "servers": {
+      "casino-portal-tools": {
+        "description": "Casino portal specific tools and APIs",
+        "capabilities": ["casino-data", "payment-gateways", "affiliate-tracking"]
+      },
+      "playwright-testing": {
+        "description": "Playwright testing automation",
+        "capabilities": ["e2e-testing", "visual-regression", "performance-testing"]
+      },
+      "security-scanner": {
+        "description": "Enterprise security scanning",
+        "capabilities": ["vulnerability-scan", "compliance-check", "security-audit"]
+      },
+      "performance-monitor": {
+        "description": "Performance monitoring and optimization",
+        "capabilities": ["core-web-vitals", "api-monitoring", "optimization-suggestions"]
+      },
+      "context7": {
+        "description": "Context7 library documentation and code examples",
+        "url": "https://context7.ai",
+        "capabilities": ["library-docs", "code-examples", "best-practices"],
+        "mandatory": true
+      },
+      "sequentialthinking": {
+        "description": "Sequential thinking server for systematic reasoning",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+        "capabilities": ["systematic-analysis", "step-by-step-reasoning", "decision-documentation"],
+        "mandatory": true
+      }
+    }
+  },
+  "subAgents": {
+    "senior-cto-architect": {
+      "specialization": "Enterprise CTO strategic oversight and technical leadership",
+      "responsibilities": ["strategic-planning", "architecture-governance", "team-coordination"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "senior-prd-context-memory-officer": {
+      "specialization": "Context memory management, PRD enforcement, and agent coordination",
+      "responsibilities": ["context-management", "prd-enforcement", "agent-oversight"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "senior-php-architect": {
+      "specialization": "PHP backend architecture and casino.ca patterns",
+      "responsibilities": ["backend-development", "api-design", "performance-optimization"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "vue-component-specialist": {
+      "specialization": "Vue.js 3+ frontend development",
+      "responsibilities": ["component-development", "ui-optimization", "responsive-design"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "playwright-testing-specialist": {
+      "specialization": "Comprehensive testing automation",
+      "responsibilities": ["test-automation", "quality-assurance", "deployment-validation"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "security-auditor": {
+      "specialization": "Enterprise security and compliance",
+      "responsibilities": ["security-auditing", "compliance-validation", "vulnerability-assessment"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "performance-optimizer": {
+      "specialization": "Performance optimization and monitoring",
+      "responsibilities": ["performance-analysis", "optimization-implementation", "monitoring-setup"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "senior-devops-infrastructure-architect": {
+      "specialization": "Enterprise DevOps, CI/CD, and infrastructure management",
+      "responsibilities": ["infrastructure-design", "deployment-automation", "monitoring-systems"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "senior-data-analytics-engineer": {
+      "specialization": "Data engineering, analytics, and business intelligence",
+      "responsibilities": ["data-architecture", "analytics-implementation", "reporting-systems"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "senior-ux-design-specialist": {
+      "specialization": "User experience design and conversion optimization",
+      "responsibilities": ["ux-design", "user-research", "conversion-optimization"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "senior-seo-content-strategist": {
+      "specialization": "SEO strategy, content planning, and competitive analysis",
+      "responsibilities": ["seo-optimization", "content-strategy", "competitive-analysis"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    },
+    "senior-compliance-legal-officer": {
+      "specialization": "Legal compliance, gambling regulations, and data protection",
+      "responsibilities": ["regulatory-compliance", "legal-review", "privacy-protection"],
+      "mcpServers": ["context7", "sequentialthinking"],
+      "mandatory": true
+    }
+  },
+  "hooks": {
+    "sessionStart": "Initialize enterprise session tracking",
+    "toolExecute": "Validate tool permissions and audit usage",
+    "deployment": "Run comprehensive validation before deployment",
+    "sessionEnd": "Cleanup and log session activities"
+  },
+  "compliance": {
+    "standards": ["SOC2", "GDPR", "PCI-DSS"],
+    "auditing": {
+      "enabled": true,
+      "retention": "7 years",
+      "encryption": true
+    },
+    "dataProtection": {
+      "encryption": "AES-256",
+      "backups": "encrypted",
+      "access": "role-based"
+    }
+  }
+}

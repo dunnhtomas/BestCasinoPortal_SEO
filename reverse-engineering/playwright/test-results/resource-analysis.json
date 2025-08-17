@@ -1,0 +1,117 @@
+{
+  "totalResources": 164,
+  "resourceTypes": {
+    "link": 11,
+    "script": 26,
+    "img": 13,
+    "css": 48,
+    "xmlhttprequest": 18,
+    "fetch": 48
+  },
+  "largestResources": [
+    {
+      "name": "https://www.casino.ca/js/advancedToplist.js?v=20250728",
+      "size": 591045,
+      "type": "script"
+    },
+    {
+      "name": "https://www.casino.ca/js/howWeRate.js?v=20250728",
+      "size": 391957,
+      "type": "script"
+    },
+    {
+      "name": "https://www.casino.ca/js/commercialToplist.js?v=20250728",
+      "size": 324537,
+      "type": "script"
+    },
+    {
+      "name": "https://www.casino.ca/js/bonusToplist.js?v=20250728",
+      "size": 320057,
+      "type": "script"
+    },
+    {
+      "name": "https://www.casino.ca/js/arcgames.js",
+      "size": 270166,
+      "type": "script"
+    },
+    {
+      "name": "https://www.casino.ca/js/popularGames.js",
+      "size": 223030,
+      "type": "script"
+    },
+    {
+      "name": "https://www.casino.ca/images/luckyones/luckyones5.jpg",
+      "size": 184438,
+      "type": "css"
+    },
+    {
+      "name": "https://data.casino.ca/custom-data.js",
+      "size": 151540,
+      "type": "script"
+    },
+    {
+      "name": "https://www.casino.ca/images/luckyones/luckyones2.jpg",
+      "size": 150355,
+      "type": "css"
+    },
+    {
+      "name": "https://www.casino.ca/js/scripts.min.js",
+      "size": 142337,
+      "type": "script"
+    }
+  ],
+  "slowestResources": [
+    {
+      "name": "https://www.casino.ca/vue/api/toplist.php",
+      "duration": 424.80000001192093,
+      "type": "xmlhttprequest"
+    },
+    {
+      "name": "https://play.casino.ca/",
+      "duration": 351.39999997615814,
+      "type": "fetch"
+    },
+    {
+      "name": "https://play.casino.ca/",
+      "duration": 335.10000002384186,
+      "type": "fetch"
+    },
+    {
+      "name": "https://images.casino.ca//PN4w/3RNAAhtkkyvSJwsEguCSWYHxLxzwhbiUmzVfXN4kxfd-?w=300&h=200&fm=avif",
+      "duration": 334.0999999642372,
+      "type": "img"
+    },
+    {
+      "name": "https://images.casino.ca//YpXTx/AAmno5QQNBn1bLP2qWJHw7zoddlYmwAPRbh36O53RCPp?w=300&h=200&fm=avif",
+      "duration": 333.9000000357628,
+      "type": "img"
+    },
+    {
+      "name": "https://images.casino.ca//pEtr/wJwTG2gcWwbRjnw9n2CiCC5Cu6SEQhHyXJSFFnSw8ydk?w=300&h=200&fm=avif",
+      "duration": 333.80000001192093,
+      "type": "img"
+    },
+    {
+      "name": "https://images.casino.ca//oKQevJ/ydYTNpvKf2WNDWsHPng5vhIkWYnp5-MH5tyi2eEHUGeQ?w=300&h=200&fm=avif",
+      "duration": 312.10000002384186,
+      "type": "img"
+    },
+    {
+      "name": "https://images.casino.ca//yhuPde/KV_htvm5Q5ri_Am-ZnCpzxKsm-s04o1yCmG7JQVF-oJO?w=300&h=200&fm=avif",
+      "duration": 311.9000000357628,
+      "type": "img"
+    },
+    {
+      "name": "https://www.casino.ca/vue/api/toplist.php?page-type=1%2Bdollar%2Bdeposit",
+      "duration": 284.80000001192093,
+      "type": "xmlhttprequest"
+    },
+    {
+      "name": "https://www.casino.ca/vue/api/toplist.php?page-type=5%2Bdollar%2Bdeposit",
+      "duration": 260.4000000357628,
+      "type": "xmlhttprequest"
+    }
+  ],
+  "cacheableResources": 0,
+  "thirdPartyResources": 73
+}

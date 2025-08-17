@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "bestcasinoportal-memory": {
+      "command": "npx",
+      "args": ["bestcasinoportal-mcp-memory"],
+      "env": {
+        "DATA_DIR": "./memory-data",
+        "PROJECT_NAME": "BestCasinoPortal_SEO",
+        "CHANNEL": "casino-portal-unified",
+        "LOG_LEVEL": "INFO"
+      },
+      "description": "BestCasinoPortal MCP Memory Keeper from GitHub repo with server IP 193.233.161.161"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"],
+      "description": "Context7 MCP server for best practices and documentation"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp-server"],
+      "description": "Playwright MCP server for testing automation"
+    }
+  }
+}
