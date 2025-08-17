@@ -11,7 +11,7 @@ use Throwable;
  * Validation Exception - Handles validation errors with structured error details
  * Located in DTOs namespace for data transfer operations
  */
-class ValidationException extends Exception
+final class ValidationException extends Exception
 {
     private array $errors;
 

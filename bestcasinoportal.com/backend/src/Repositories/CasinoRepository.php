@@ -7,6 +7,7 @@ namespace BestCasinoPortal\Repositories;
 use BestCasinoPortal\Models\Casino;
 use BestCasinoPortal\DTOs\CasinoFilterDto;
 use BestCasinoPortal\Database\Database;
+use BestCasinoPortal\Cache\CacheManager;
 use PDO;
 use PDOException;
 use Psr\Log\LoggerInterface;
@@ -20,6 +21,7 @@ final readonly class CasinoRepository
 {
     public function __construct(
         private Database $database,
+        private CacheManager $cache,
         private LoggerInterface $logger
     ) {}
 

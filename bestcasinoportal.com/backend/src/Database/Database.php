@@ -10,7 +10,7 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Database Connection Manager
- * 
+ *
  * Professional database abstraction layer following Context7 best practices
  * Provides connection management, query execution, and error handling
  */

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace BestCasinoPortal\Services;
 
 use BestCasinoPortal\DTOs\CasinoFilterDto;
+use BestCasinoPortal\DTOs\ValidationException;
 use BestCasinoPortal\Models\Casino;
 use BestCasinoPortal\Repositories\CasinoRepository;
 use BestCasinoPortal\Cache\CacheManager;
@@ -86,7 +87,7 @@ final readonly class CasinoService
         $casinos = $this->casinoRepository->findMultiple($casinoIds);
         
         if (count($casinos) !== count($casinoIds)) {
-            throw new InvalidArgumentException('Some casinos not found');
+            throw new ValidationException(['casino_ids' => ['Some casinos not found']], 'Casino validation failed');
         }
         
         return [
